@@ -7,8 +7,8 @@ import akka.util.ByteString
   */
 trait ValueFormatter[T] {
 
-  def serialize(value: T): ByteString
+  def read(bytes: ByteString): T
 
-  def deserialize(bytes: ByteString): T
+  def write(value: T): ByteString
 
 }

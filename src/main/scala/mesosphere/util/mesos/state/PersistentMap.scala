@@ -35,13 +35,13 @@ trait PersistentMap[T] extends PersistentCollection[T] {
   /**
     * Returns a copy of this collection with the supplied mapping.
     */
-  def +(mapping: (String, T)): this.type
+  def +(mapping: (String, T)): PersistentMap[T]
 
   /**
     * Returns a copy of this collection without a mapping for the
     * supplied key.
     */
-  def -(key: String): this.type
+  def -(key: String): PersistentMap[T]
 
   /**
     * Returns a regular Scala collection containing all of the
