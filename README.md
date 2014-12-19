@@ -1,4 +1,4 @@
-# Mesos State Backed Scala Collections
+# Mesos State Backed Collections
 
 Persistent collection types backed by implementations of the Mesos state
 API.
@@ -34,4 +34,9 @@ val result: Future[Try[Unit]]] = people.commit()
 - List
 - Set
 - String-keyed map
+
+### Collection storage schemes
+
+- Contiguous
+- Segmented
 

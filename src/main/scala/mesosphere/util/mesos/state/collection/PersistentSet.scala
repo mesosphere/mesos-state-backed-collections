@@ -1,4 +1,4 @@
-package mesosphere.util.mesos.state
+package mesosphere.util.mesos.state.collection
 
 /**
   * A persistent set.

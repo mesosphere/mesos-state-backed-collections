@@ -1,4 +1,4 @@
-package mesosphere.util.mesos.state
+package mesosphere.util.mesos.state.collection
 
 import scala.concurrent.Future
 import scala.util.Try
@@ -7,6 +7,11 @@ import scala.util.Try
   * Parent type of all state-backed collections.
   */
 trait PersistentCollection[T] {
+
+  /**
+    * Returns `true` if this collection has unsaved changes.
+    */
+  def hasUncommittedChanges(): Boolean
 
   /**
     * Returns the future result of commiting the enqueued changes
